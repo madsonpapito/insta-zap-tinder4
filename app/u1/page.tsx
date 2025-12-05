@@ -340,7 +340,23 @@ export default function U1() {
     return { reportConversations: conversations, reportMedia: media };
   }, [selectedGender]);
   
-  const suspiciousKeywords = [{ word: "Naughty", count: 13 }, { word: "Love", count: 22 }, { word: "Secret", count: 7 }, { word: "Hidden", count: 11 }, { word: "Don't tell", count: 5 }]
+  const suspiciousKeywords = [
+  { word: "Love", count: 22 },
+  { word: "Naughty", count: 18 },
+  { word: "Baby", count: 15 },
+  { word: "Miss you", count: 13 },
+  { word: "Hidden", count: 11 },
+  { word: "Babe", count: 10 },
+  { word: "Secret", count: 9 },
+  { word: "Can't wait", count: 7 },
+  { word: "Delete this", count: 6 },
+  { word: "Don't tell", count: 5 },
+  { word: "Sexy", count: 5 },
+  { word: "XOXO", count: 4 },
+  { word: "Come over", count: 4 },
+  { word: "Our secret", count: 3 },
+  { word: "He's asleep", count: 3 },
+]
   
   const filteredCountries = useMemo(() => countries.filter((c) => c.name.toLowerCase().includes(countrySearch.toLowerCase()) || c.code.includes(countrySearch)), [countrySearch])
 
