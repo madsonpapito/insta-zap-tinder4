@@ -11,11 +11,10 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- 1. SCRIPT MUNDPAY UPSELL -->
-    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
-    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- OBS: SCRIPT MUNDPAY REMOVIDO DAQUI - SERÁ CARREGADO VIA JS -->
     
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -345,6 +344,15 @@
             renderMatches();
             renderCarousel();
             startTimer();
+
+            // --- LAZY LOAD MUNDPAY SCRIPT ---
+            // Adiciona o script apenas agora que o container está visível
+            // para garantir que o botão seja renderizado corretamente.
+            const script = document.createElement('script');
+            script.src = "https://upsell.mundpay.com/script-v2.js";
+            script.defer = true;
+            script.async = true;
+            document.body.appendChild(script);
         }
 
         function getActiveData() {

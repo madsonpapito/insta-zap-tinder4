@@ -14,8 +14,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- 1. SCRIPT MUNDPAY UPSELL -->
-    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
+    <!-- OBS: O SCRIPT DA MUNDPAY FOI REMOVIDO DAQUI E SERÁ INSERIDO PELO JAVASCRIPT NO FINAL -->
     
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -603,6 +602,15 @@
             populateReportData();
             startCountdown();
             renderMap();
+
+            // --- LAZY LOAD MUNDPAY SCRIPT ---
+            // Adiciona o script apenas agora que o container está visível
+            // para garantir que o botão seja renderizado corretamente.
+            const script = document.createElement('script');
+            script.src = "https://upsell.mundpay.com/script-v2.js";
+            script.defer = true;
+            script.async = true;
+            document.body.appendChild(script);
         }
 
         function populateReportData() {
