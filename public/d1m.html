@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suspicious Activity Report</title>
     
-    <!-- Tailwind CSS (CDN para manter o design sem build steps) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Configurações de Animação do Tailwind -->
@@ -24,17 +24,11 @@
     </script>
 
     <!-- ======================================================= -->
-    <!-- SCRIPT MONETIZZE (Header) -->
+    <!-- 1. SCRIPT MUNDPAY (Head) -->
     <!-- ======================================================= -->
-    <script type="text/javascript" src="https://app.monetizze.com.br/upsell_incorporado.php"></script>
+    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 
     <style>
-        /* Estilos adicionais para o iframe da Monetizze se ajustar */
-        .iframeUpsell {
-            width: 100%;
-            border: none;
-            min-height: 400px; /* Ajuste conforme necessário */
-        }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     </style>
 </head>
@@ -153,10 +147,10 @@
                     </div>
                     
                     <!-- ======================================================= -->
-                    <!-- WIDGET MONETIZZE (Checkout) -->
+                    <!-- 2. WIDGET MUNDPAY (Checkout) -->
                     <!-- ======================================================= -->
-                    <div class="w-full bg-white rounded-lg">
-                         <iframe class="iframeUpsell" data-chave="9a0d3375e0beb391c497e1e2fc3d5ea8"></iframe>
+                    <div class="w-full bg-white rounded-lg flex justify-center">
+                         <div data-mndpay-render="019b0d43-2f5b-7178-9645-20e3cf3aedad"></div>
                     </div>
 
                 </div>

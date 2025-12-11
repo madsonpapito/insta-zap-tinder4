@@ -14,8 +14,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- 1. SCRIPT MONETIZZE ONE CLICK -->
-    <script type="text/javascript" src="https://app.monetizze.com.br/upsell_incorporado.php"></script>
+    <!-- 1. SCRIPT MUNDPAY UPSELL -->
+    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
     
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -25,15 +25,6 @@
         /* Animation classes */
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
-        
-        /* --- AJUSTE DE ALTURA DO IFRAME --- */
-        /* Aumentado para 500px para garantir que o upsell apareça inteiro sem scroll interno */
-        .iframeUpsell {
-            width: 100%;
-            border: none;
-            min-height: 500px; 
-            display: block;
-        }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col">
@@ -231,10 +222,9 @@
                             <p id="countdown-timer" class="text-4xl font-mono font-bold my-1 text-red-600">05:00</p>
                         </div>
                         
-                        <!-- 2. IFRAME MONETIZZE ONE CLICK (BODY) -->
+                        <!-- 2. WIDGET MUNDPAY (BODY) -->
                         <div id="checkout-widget-area" class="w-full pt-2 flex justify-center">
-                            <!-- O CSS .iframeUpsell garante min-height: 500px -->
-                            <iframe class="iframeUpsell" data-chave="15b82916c72aa5872eab291e0938ce75"></iframe>
+                            <div data-mndpay-render="019b0d37-ef9b-73eb-a287-253b24e74a23"></div>
                         </div>
 
                     </div>

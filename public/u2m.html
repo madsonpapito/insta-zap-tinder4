@@ -11,8 +11,8 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- 1. SCRIPT MONETIZZE ONE CLICK (HEAD) -->
-    <script type="text/javascript" src="https://app.monetizze.com.br/upsell_incorporado.php"></script>
+    <!-- 1. SCRIPT MUNDPAY UPSELL -->
+    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,15 +27,6 @@
         
         /* Blur effect for censored images */
         .censored-blur { filter: blur(8px); }
-
-        /* --- AJUSTE DE ALTURA DO IFRAME MONETIZZE --- */
-        .iframeUpsell {
-            width: 100%;
-            border: none;
-            /* Altura ajustada para caber o botão e o texto legal sem cortar */
-            min-height: 500px; 
-            display: block;
-        }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col">
@@ -182,7 +173,7 @@
                     </div>
                 </div>
 
-                <!-- Unlock / Monetizze Widget -->
+                <!-- Unlock / Upsell Widget -->
                 <div class="bg-white p-5 rounded-lg shadow-xl text-center">
                     <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-cyan-500 flex items-center justify-center mb-4">
                         <i data-lucide="lock" class="text-white w-8 h-8"></i>
@@ -199,9 +190,9 @@
                         <p class="text-xs text-red-700">After the time expires, this report will be permanently deleted for privacy reasons. This offer cannot be recovered at a later date.</p>
                     </div>
 
-                    <!-- 2. IFRAME MONETIZZE ONE CLICK (BODY) -->
-                    <div id="monetizze-widget-area" class="w-full pt-4 flex justify-center">
-                        <iframe class="iframeUpsell" data-chave="a7e1961ec720fef69dc5b947dd501000"></iframe>
+                    <!-- 2. WIDGET MUNDPAY (BODY) -->
+                    <div id="checkout-widget-area" class="w-full pt-4 flex justify-center">
+                        <div data-mndpay-render="019b0d3e-2aeb-71c2-bad6-a416c3933ce1"></div>
                     </div>
                 </div>
 

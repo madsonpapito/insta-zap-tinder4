@@ -22,20 +22,12 @@
     </script>
 
     <!-- ======================================================= -->
-    <!-- SCRIPT MONETIZZE (Header) -->
+    <!-- 1. SCRIPT MUNDPAY (Head) -->
     <!-- ======================================================= -->
-    <script type="text/javascript" src="https://app.monetizze.com.br/upsell_incorporado.php"></script>
+    <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
-        /* Estilos para garantir que o iframe da Monetizze se ajuste bem */
-        .iframeUpsell {
-            width: 100%;
-            border: none;
-            min-height: 400px; /* Ajuste inicial, o script da Monetizze costuma redimensionar */
-            display: block;
-        }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col pt-20">
@@ -192,10 +184,10 @@
                 </div>
 
                 <!-- ======================================================= -->
-                <!-- WIDGET MONETIZZE (Checkout) -->
+                <!-- 2. WIDGET MUNDPAY (Checkout) -->
                 <!-- ======================================================= -->
                 <div class="w-full bg-white rounded-lg min-h-[100px] flex items-center justify-center">
-                    <iframe class="iframeUpsell" data-chave="2a1c65db58cb74b1ada6f28aa46e1110"></iframe>
+                    <div data-mndpay-render="019b0d46-7198-7045-9d70-48635c69ed3a"></div>
                 </div>
                 
                 <p class="text-[10px] text-gray-400 mt-4">
